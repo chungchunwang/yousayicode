@@ -1,0 +1,67 @@
+.chatBox{
+    position:absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    bottom: 10px;
+}
+.textArea{
+    position:absolute;
+    left: 10px;
+    right: 80px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.sendButton{
+    position:absolute;
+    right: 10px;
+    width: 60px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.menuBar{
+    position:absolute;
+    left:0;
+    right:0;
+    top: 0;
+    height: 20px;
+    background-color: var(--vscode-titleBar-activeBackground);
+    text-align: center;
+    font: var(--vscode-editor-font-family);
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.menuTitle{
+    flex: 1;
+}
+.settingsButton{
+    width:20px;
+    line-height: 23px;
+    
+}
+.settingsButton:hover{
+    background-color: var(--vscode-button-hoverBackground);
+}
+.chatMessages{ 
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    bottom: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding:16px;
+    text-align: center;
+}
+
+.divider{
+    align-self: center;
+    margin:15px;
+}

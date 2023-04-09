@@ -1,0 +1,53 @@
+.chatMessage{
+    position:relative;
+    align-self: center;
+    width: 100%;
+    background-color: var(--vscode-sideBar-background);
+    border-radius: 3px;
+    text-align: center;
+    font: var(--vscode-editor-font-family);
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px;
+    display: flex;
+}
+.chatMessageProfileMargin{
+    position:relative;
+    width: 45px;
+    padding: 5px;
+    text-align: right;
+    min-height: 35px;
+}
+.chatMessageProfile{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 33px;
+}
+.chatMessageProfileBot{
+    background-color: #2a8d5f;
+}
+.chatMessageProfileUser{
+    background-color: #cc6511;
+}
+.chatMessageProfileModify{
+    background-color: #2a608d;
+}
+.chatMessageProfileGenerate{
+    background-color: #5f1f85;
+}
+.chatMessageTextContents{
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    overflow-x: hidden;
+}

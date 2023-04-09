@@ -1,0 +1,102 @@
+{
+  "name": "yousayicode",
+  "displayName": "YouSayICode",
+  "description": "Tell me what to do, I'll write the code!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onview:yousayicode.chat"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "YouSayICodeChat": [
+        {
+          "type": "webview",
+          "id": "yousayicode.chat",
+          "name": "Chat"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "yousayicode.modify",
+        "title": "Modify selected code."
+      },
+      {
+        "command": "yousayicode.generate",
+        "title": "Generate code."
+      },
+      {
+        "command": "yousayicode.openChatView",
+        "title": "Open Chat View"
+      }
+    ],
+    "configuration": {
+      "title": "YouSayICode Settings",
+      "properties": {
+        "yousayicode.openAIKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Open AI Key"
+        },
+        "yousayicode.chatMemory": {
+          "type": "integer",
+          "default": 10,
+          "description": "How many messages do you want the AI to remember? A message is considered either a prompt or a response. The entire chat history is sent to OpenAI to generate every response, so a larger history makes generation more expensive."
+        },
+        "yousayicode.includeCommandMessagesInChat": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include messages sent to power editor commands (such as modify or generate) in the chat history. This is useful if you want to reference commands you have made in the chat."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node ./esbuild.js",
+    "package": "NODE_ENV=production node ./esbuild.js",
+    "watch": "node ./esbuild.js --watch",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/primer__octicons": "^17.11.0",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "@types/vscode": "^1.77.0",
+    "@types/vscode-webview": "^1.57.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "esbuild": "^0.16.17",
+    "esbuild-css-modules-plugin": "^2.7.1",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "typescript-plugin-css-modules": "^5.0.0"
+  },
+  "dependencies": {
+    "@primer/octicons": "^18.3.0",
+    "@vscode/codicons": "^0.0.32",
+    "@vscode/webview-ui-toolkit": "^1.2.2",
+    "openai": "^3.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.6",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^3.0.1"
+  }
+}

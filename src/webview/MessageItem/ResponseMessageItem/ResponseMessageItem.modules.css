@@ -1,0 +1,21 @@
+.codeBlock{
+    position:relative;
+}
+.codeBlockClipboardButton{
+    position:absolute;
+    right: 5;
+    top: 5;
+    width: 20px;
+    height: 20px;
+    background-color: var(--vscode-editor-background);
+    border-radius: 3px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    opacity: 70%;
+}
+.codeBlockClipboardButton:hover{
+    opacity: 100%;
+    background-color: var(--vscode-button-hoverBackground);
+}
