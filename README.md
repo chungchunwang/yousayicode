@@ -1,71 +1,34 @@
-# yousayicode README
+# You Say I Code Extension
 
-This is the README for your extension "yousayicode". After writing up a brief description, we recommend including the following sections.
+This is an extension that integrates GPT-3 with VSCode. It features tool to help you write and refactor code, as well as a chat tool to converse with an AI assistant.
 
 ## Features
+These are Command Palette commands, which you can bind to whatever key you want!
+1. Generate Code:
+    - Write a prompt, and the extension will insert code fulfilling it at your cursor location.
+2. Modify Code:
+    - With some code selected, tell the extension how you want to change the code.
+3. Open Chat View:
+    - Open a chat view where you can talk with an AI assistant.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Screenshots
 
-For example if there is an image subfolder under your extension project workspace:
+![Screenshot 1](images/shot1.png)
 
-\!\[feature X\]\(images/feature-x.png\)
+![Screenshot 2](images/shot2.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Screenshot 3](images/shot3.png)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+You will need an OpenAI token to be able to generate AI responses. Set your API token in the settings for this extension.
 
-## Extension Settings
+## Todo
+There is still a lot of things that could improve about this extension.
+- The chat view should ideally sent the message upon clicking enter instead of having the press the button every time.
+- The goto command, which jumps to a place in your code based on a description of it.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+I will try to implement these as time goes on, but if you would like to contribute, feel free to make a pull request.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## Contributing
+If you would like to add any new features you have thought of, they are welcome! Just submit a pull request!
