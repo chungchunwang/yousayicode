@@ -43,7 +43,7 @@
         },
         "yousayicode.includeCommandMessagesInChat": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Include messages sent to power editor commands (such as modify or generate) in the chat history. This is useful if you want to reference commands you have made in the chat."
         }
       }
