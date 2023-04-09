@@ -14,15 +14,6 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "views": {
-      "YouSayICodeChat": [
-        {
-          "type": "webview",
-          "id": "yousayicode.chat",
-          "name": "Chat"
-        }
-      ]
-    },
     "commands": [
       {
         "command": "yousayicode.modify",
