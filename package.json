@@ -3,6 +3,10 @@
   "displayName": "YouSayICode",
   "description": "Tell me what to do, I'll write the code!",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chungchunwang/yousayicode.git"
+  },
   "engines": {
     "vscode": "^1.77.0"
   },
